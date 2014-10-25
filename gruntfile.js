@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-
+  grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-contrib-clean'); 
   grunt.loadNpmTasks('grunt-contrib-concat');
 
@@ -8,11 +8,25 @@ module.exports = function(grunt) {
   grunt.registerTask('copyMetaFile',['concat:cname','concat:human','concat:readme','concat:robots']); 
   grunt.registerTask('copyProjectFiles',['concat:main']) ;
   grunt.registerTask('default', ['c','copyMetaFile','copyProjectFiles']);
+  grunt.registerTask('publish', ['bump','c','copyMetaFile','copyProjectFiles']);
 
   // Project configuration.
   grunt.initConfig({
 
+
+  bump: {
+    options: {
+      files: ['package.json','bower.json'],
+      updateConfigs: ['pkg','bower'],
+      commit: false,
+      createTag: false,
+      push: false,
+      globalReplace: false
+    }
+  },
+
     pkg: grunt.file.readJSON('package.json'),
+    bower: grunt.file.readJSON('bower.json'),
 
     /* Cleaning */
     clean: {
