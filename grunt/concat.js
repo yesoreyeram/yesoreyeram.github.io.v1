@@ -18,5 +18,9 @@ module.exports = {
     readme: {
         src: ['src/meta/README.md'],
         dest: 'README.md',
+    },
+    cssLib: {
+        src:['lib/bootstrap/dist/css/bootstrap.css'],
+        dest:'css/lib.css',
     }
 }

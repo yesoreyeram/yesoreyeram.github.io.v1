@@ -1,6 +1,7 @@
 default:
 - 'c'
 - 'copyMetaFile'
+- 'copyLibFiles'
 - 'copyProjectFiles'
 c:
 - 'clean:CleanPreviousBuild'
@@ -9,10 +10,10 @@ copyMetaFile:
 - 'concat:human'
 - 'concat:readme'
 - 'concat:robots'
+copyLibFiles:
+- 'concat:cssLib'
 copyProjectFiles:
 - 'concat:main'
 publish:
 - 'bump'
-- 'c'
-- 'copyMetaFile'
-- 'copyProjectFiles'
+- 'default'
