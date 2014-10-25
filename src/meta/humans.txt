@@ -1,0 +1,28 @@
+sriramajeyam.com
+================
+
+Sriramajeyam Sugumaran's official website.
+
+----------
+/* Team */
+----------
+Design & Developed by :	Sriramajeyam Sugumaran
+Twitter : yesoreyeram
+Github : yesoreyeram
+Google+ : yesoreyeram
+Facebook : yesoreyeram
+
+------------
+/* Thanks */
+------------
+To: All my friends & supporters
+
+----------
+/* Site */
+----------
+Site created on: 2014/10/25
+Standards : HTML5
+Components: NPM, Bower
+Languages: English
+Hosting: Github pages
+Software: Sublime Text 3.0, NodeJs
