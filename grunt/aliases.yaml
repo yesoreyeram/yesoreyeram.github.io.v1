@@ -1,0 +1,18 @@
+default:
+- 'c'
+- 'copyMetaFile'
+- 'copyProjectFiles'
+c:
+- 'clean:CleanPreviousBuild'
+copyMetaFile:
+- 'concat:cname'
+- 'concat:human'
+- 'concat:readme'
+- 'concat:robots'
+copyProjectFiles:
+- 'concat:main'
+publish:
+- 'bump'
+- 'c'
+- 'copyMetaFile'
+- 'copyProjectFiles'
