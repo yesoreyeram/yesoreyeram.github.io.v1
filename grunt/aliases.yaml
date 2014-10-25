@@ -1,7 +1,9 @@
 default:
 - 'c'
+- 'replace:replacebuilddate'
 - 'copyMetaFile'
 - 'copyLibFiles'
+- 'replace:wordart'
 - 'copyProjectFiles'
 c:
 - 'clean:CleanPreviousBuild'
@@ -9,6 +11,7 @@ copyMetaFile:
 - 'concat:cname'
 - 'concat:human'
 - 'concat:readme'
+- 'concat:sitemap'
 - 'concat:robots'
 copyLibFiles:
 - 'concat:cssLib'

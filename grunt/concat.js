@@ -1,6 +1,6 @@
 module.exports = {
     main: {
-        src: ['src/app/index.html'],
+        src: ['dist/app/index.html'],
         dest: 'index.html'
     },
     robots: {
@@ -8,8 +8,12 @@ module.exports = {
         dest: 'robots.txt',
     },
     human: {
-        src: ['src/meta/humans.txt'],
+        src: ['dist/meta/humans.txt'],
         dest: 'humans.txt',
+    },
+    sitemap: {
+        src: ['dist/meta/sitemap.xml'],
+        dest: 'sitemap.xml',
     },
     cname: {
         src: ['src/meta/CNAME'],
