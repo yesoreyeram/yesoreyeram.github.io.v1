@@ -1,6 +1,6 @@
 {
   "name": "yesoreyeram.github.io",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://github.com/yesoreyeram/yesoreyeram.github.io",
   "description": "Sriramajeyam Sugumaran's official website",
   "main": "index.html",
@@ -20,5 +20,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yesoreyeram/yesoreyeram.github.io/issues"
+  },
+  "devDependencies": {
+    "bower": "^1.3.12"
   }
 }
