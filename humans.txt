@@ -21,7 +21,7 @@ To: All my friends & supporters
 /* Site */
 ----------
 Site created on: 2014/10/25
-Last modified at: 2014-10-25 15:39:52 GMT+0530 (India Standard Time)
+Last modified at: 2014-10-26 12:25:45 GMT+0530 (India Standard Time)
 Standards : HTML5
 Components: NPM, Bower
 Languages: English
