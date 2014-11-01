@@ -26,5 +26,13 @@ module.exports = {
     cssLib: {
         src:['lib/bootstrap/dist/css/bootstrap.css'],
         dest:'css/lib.css',
+    },
+    jsLib: {
+        src:['lib/angular/angular.js','lib/angular-route/angular-route.js'],
+        dest:'js/lib.js',
+    },
+    jsApp: {
+        src:['src/app/app.js'],
+        dest:'js/app.js',
     }
 }

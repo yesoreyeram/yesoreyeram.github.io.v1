@@ -3,6 +3,7 @@ default:
 - 'replace:replacebuilddate'
 - 'copyMetaFile'
 - 'copyLibFiles'
+- 'copyAppFiles'
 - 'replace:wordart'
 - 'copyProjectFiles'
 c:
@@ -15,6 +16,9 @@ copyMetaFile:
 - 'concat:robots'
 copyLibFiles:
 - 'concat:cssLib'
+- 'concat:jsLib'
+copyAppFiles:
+- 'concat:jsApp'
 copyProjectFiles:
 - 'concat:main'
 publish:
