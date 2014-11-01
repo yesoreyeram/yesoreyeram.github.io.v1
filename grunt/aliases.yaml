@@ -18,6 +18,7 @@ copyLibFiles:
 - 'concat:cssLib'
 - 'concat:jsLib'
 copyAppFiles:
+- 'concat:cssApp'
 - 'concat:jsApp'
 copyProjectFiles:
 - 'concat:main'
