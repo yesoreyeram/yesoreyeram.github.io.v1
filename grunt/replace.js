@@ -10,8 +10,8 @@ module.exports = {
       }]
     },
     wordart :{
-      src : ['src/app/index.html'],
-      dest : 'dist/app/index.html',
+      src : ['dist/app/index.html'],
+      dest : 'index.html',
       replacements: [{
         from : "<meta name=\"banner\" value=\"sriramajeyam.com\">",
         to : "<%= banner %>"

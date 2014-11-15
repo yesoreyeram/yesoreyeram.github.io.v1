@@ -4,8 +4,10 @@ default:
 - 'copyMetaFile'
 - 'copyLibFiles'
 - 'copyAppFiles'
+- 'removeWhiteSpace'
 - 'replace:wordart'
-- 'copyProjectFiles'
+removeWhiteSpace:
+- 'htmlmin:removeWhiteSpaceAndComments'
 c:
 - 'clean:CleanPreviousBuild'
 copyMetaFile:
