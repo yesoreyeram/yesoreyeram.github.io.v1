@@ -14,6 +14,7 @@ copyMetaFile:
 - 'concat:readme'
 - 'concat:sitemap'
 - 'concat:robots'
+- 'concat:manifest'
 copyLibFiles:
 - 'concat:cssLib'
 - 'concat:jsLib'

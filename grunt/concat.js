@@ -23,6 +23,10 @@ module.exports = {
         src: ['src/meta/README.md'],
         dest: 'README.md',
     },
+    manifest: {
+        src: ['src/meta/manifest.json'],
+        dest: 'manifest.json',
+    },
     cssLib: {
         src:['lib/bootstrap/dist/css/bootstrap.css'],
         dest:'css/lib.css',
