@@ -7,5 +7,14 @@ module.exports = {
           files: {                         
             'dist/app/index.html': 'src/app/index.html'
           }
+        },
+        CopyModules: {                                     
+          options: {                                
+            removeComments: true,
+            collapseWhitespace: true
+          },
+          files: {                         
+            'modules/home/home.html': 'src/app/home/home.html'
+          }
         }
 }

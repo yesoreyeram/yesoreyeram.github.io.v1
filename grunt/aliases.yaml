@@ -6,6 +6,7 @@ default:
 - 'copyAppFiles'
 - 'removeWhiteSpace'
 - 'replace:wordart'
+- 'htmlmin:CopyModules'
 removeWhiteSpace:
 - 'htmlmin:removeWhiteSpaceAndComments'
 c:

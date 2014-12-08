@@ -40,7 +40,7 @@ module.exports = {
         dest:'js/lib.js',
     },
     jsApp: {
-        src:['src/app/app.js'],
+        src:['src/app/app.js','src/app/home/home.js'],
         dest:'js/app.js',
     }
 }
