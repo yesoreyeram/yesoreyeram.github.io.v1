@@ -14,7 +14,8 @@ module.exports = {
             collapseWhitespace: true
           },
           files: {                         
-            'modules/home/home.html': 'src/app/home/home.html'
+            'modules/home/home.html': 'src/app/home/home.html',
+            'modules/aboutme/aboutme.html': 'src/app/aboutme/aboutme.html'
           }
         }
 }

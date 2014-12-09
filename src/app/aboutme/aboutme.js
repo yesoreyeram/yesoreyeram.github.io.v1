@@ -1,26 +1,5 @@
 'use strict';
 
-var sriramajeyamapp  = angular.module("sriramajeyam",['ngRoute','sriramajeyam.home','sriramajeyam.aboutme']);
-
-sriramajeyamapp.config(['$routeProvider','$compileProvider', function($routeProvider,$compileProvider) {
-	$compileProvider.debugInfoEnabled(false);
-	$routeProvider.when('/', { templateUrl: 'modules/home/home.html', controller: 'HomeCtrl' });
-  	$routeProvider.otherwise({redirectTo: '/'});
-}]);
-
-sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
-	$scope.title ="Sriramajeyam Sugumaran Official website";
-}]);
-
-'use strict';
-
-var homeModule  = angular.module("sriramajeyam.home",['ngRoute']);
-
-homeModule.controller('HomeCtrl',['$scope',function($scope){
-	$scope.title ="Sriramajeyam Sugumaran Official website";
-}]);
-'use strict';
-
 var aboutmeModule  = angular.module("sriramajeyam.aboutme",['ngRoute']);
 
 aboutmeModule.config(['$routeProvider', function($routeProvider) {

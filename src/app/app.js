@@ -1,6 +1,6 @@
 'use strict';
 
-var sriramajeyamapp  = angular.module("sriramajeyam",['ngRoute','sriramajeyam.home']);
+var sriramajeyamapp  = angular.module("sriramajeyam",['ngRoute','sriramajeyam.home','sriramajeyam.aboutme']);
 
 sriramajeyamapp.config(['$routeProvider','$compileProvider', function($routeProvider,$compileProvider) {
 	$compileProvider.debugInfoEnabled(false);
