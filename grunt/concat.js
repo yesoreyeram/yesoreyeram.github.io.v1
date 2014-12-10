@@ -32,7 +32,7 @@ module.exports = {
         dest:'css/lib.css',
     },
     cssApp:{
-        src:['src/app/app.css'],
+        src:['src/app/app.css','src/app/aboutme/aboutme.css'],
         dest:'css/app.css',
     },
     jsLib: {
