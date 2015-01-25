@@ -20,30 +20,13 @@
 </head>
 <body ng-controller="appCtrl" ng-cloak class="ng-cloak">
 	<div id="top">
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-			      <a class="navbar-brand" href="#/">
-			        sriramajeyam
-			      </a>
-			    </div>
-			     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      				<ul class="nav navbar-nav navbar-right">
-      					 <li><a href="#/aboutme">About Me</a></li>
-      				</ul>
-      			</div>
-			</div>
-		</nav>
+		<div ng-include="'modules/app/topmenu.html'"></div>
 	</div>
 	<div id="main">
 		<div ng-view></div>
 	</div>
 	<div id="bottom">
-		<nav class="navbar navbar-default navbar-fixed-bottom">
-			<div class="container">
-				<p class="navbar-text">Thanks for visiting my site.</p>
-			</div>
-		</nav>
+		<div ng-include="'modules/app/bottom.html'"></div>
 	</div>
 	<script type="text/javascript" src="js/lib.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>

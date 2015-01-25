@@ -15,7 +15,9 @@ module.exports = {
           },
           files: {                         
             'modules/home/home.html': 'src/app/home/home.html',
-            'modules/aboutme/aboutme.html': 'src/app/aboutme/aboutme.html'
+            'modules/aboutme/aboutme.html': 'src/app/aboutme/aboutme.html',
+            'modules/app/topmenu.html': 'src/app/app/topmenu.html',
+            'modules/app/bottom.html': 'src/app/app/bottom.html'
           }
         }
 }
