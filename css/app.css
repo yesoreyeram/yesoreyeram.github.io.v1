@@ -7,7 +7,25 @@ html
   overflow: -moz-scrollbars-vertical; 
   overflow-y: scroll;
 }
-body { padding-top: 70px;  padding-bottom: 70px; }
+body 
+{
+	padding-top: 70px;
+	padding-bottom: 70px; 
+}
+.navbar {
+	background-color: #3f51b5 !important;
+	color:#ffffff;
+}
+.navbar a , .navbar-default .navbar-brand,.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus  ,.navbar-default .navbar-text , .navbar-default .navbar-nav > li > a,.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{color: #ffffff;}
+#siteTitle
+{
+	text-transform: capitalize;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 500;
+	font-size: 2rem;
+}
 #aboutme
 {
 	margin-top: 50px;

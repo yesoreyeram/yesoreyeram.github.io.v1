@@ -1,6 +1,17 @@
 'use strict';
 
-var sriramajeyamapp  = angular.module("sriramajeyam",['ngRoute','sriramajeyam.home','sriramajeyam.aboutme','sriramajeyam.skills','sriramajeyam.contactme']);
+var thirdpartyDependencies = [	
+	'ngRoute'
+];
+
+var myappDependencies = [	
+	'sriramajeyam.home',
+	'sriramajeyam.aboutme',
+	'sriramajeyam.skills',
+	'sriramajeyam.contactme'
+];
+
+var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
 
 sriramajeyamapp.config(['$routeProvider','$compileProvider', function($routeProvider,$compileProvider) {
 	$compileProvider.debugInfoEnabled(false);
@@ -9,5 +20,9 @@ sriramajeyamapp.config(['$routeProvider','$compileProvider', function($routeProv
 }]);
 
 sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
+	$scope.myprofile = {
+		"firstName" : "sriramajeyam",
+		"lastName" : "sriramajeyam"
+	}
 	$scope.title ="Sriramajeyam Sugumaran Official website";
 }]);
