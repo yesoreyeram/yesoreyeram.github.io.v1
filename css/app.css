@@ -2,6 +2,11 @@
 {
 	display: none !important;
 }
+html 
+{
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
+}
 body { padding-top: 70px;  padding-bottom: 70px; }
 #aboutme
 {
@@ -51,3 +56,4 @@ body { padding-top: 70px;  padding-bottom: 70px; }
 	-o-filter: grayscale(0);
 	-ms-filter: grayscale(0);
 }
+

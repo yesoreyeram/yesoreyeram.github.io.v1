@@ -16,6 +16,8 @@ module.exports = {
           files: {                         
             'modules/home/home.html': 'src/app/home/home.html',
             'modules/aboutme/aboutme.html': 'src/app/aboutme/aboutme.html',
+            'modules/skills/skills.html': 'src/app/skills/skills.html',
+            'modules/contactme/contactme.html': 'src/app/contactme/contactme.html',
             'modules/app/topmenu.html': 'src/app/app/topmenu.html',
             'modules/app/bottom.html': 'src/app/app/bottom.html'
           }

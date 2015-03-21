@@ -32,7 +32,7 @@ module.exports = {
         dest:'css/lib.css',
     },
     cssApp:{
-        src:['src/app/app.css','src/app/aboutme/aboutme.css'],
+        src:['src/app/app.css','src/app/aboutme/aboutme.css','src/app/skills/skills.css','src/app/contactme/contactme.css'],
         dest:'css/app.css',
     },
     jsLib: {
@@ -40,7 +40,7 @@ module.exports = {
         dest:'js/lib.js',
     },
     jsApp: {
-        src:['src/app/app.js','src/app/home/home.js','src/app/aboutme/aboutme.js'],
+        src:['src/app/app.js','src/app/home/home.js','src/app/aboutme/aboutme.js','src/app/skills/skills.js','src/app/contactme/contactme.js'],
         dest:'js/app.js',
     }
 }
