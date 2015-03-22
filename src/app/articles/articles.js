@@ -4,7 +4,7 @@ var articlesModule  = angular.module("sriramajeyam.articles",['ngRoute','ngSanit
 
 articlesModule.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/articles', { templateUrl: 'modules/articles/articles.html', controller: 'articlesCtrl' });
-	$routeProvider.when('/blog', { templateUrl: 'modules/articles/articles.html', controller: 'articlesCtrl' });
+	$routeProvider.when('/blog', {redirectTo: '/articles'});
 	$routeProvider.when('/article/:slug', { templateUrl: 'modules/articles/article.html', controller: 'articleCtrl' });
 }]);
 
