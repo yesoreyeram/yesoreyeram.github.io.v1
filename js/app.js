@@ -12,7 +12,8 @@ var myappDependencies = [
 	'sriramajeyam.contactme',
 	'sriramajeyam.bookmarks',
 	'sriramajeyam.disclaimer',
-	'sriramajeyam.articles'
+	'sriramajeyam.articles',
+	'sriramajeyam.module404'
 ];
 
 var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
@@ -20,7 +21,6 @@ var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.conc
 sriramajeyamapp.config(['$routeProvider','$compileProvider', function($routeProvider,$compileProvider) {
 	$compileProvider.debugInfoEnabled(false);
 	$routeProvider.when('/', { templateUrl: 'modules/home/home.html', controller: 'HomeCtrl' });
-  	$routeProvider.otherwise({redirectTo: '/'});
 }]);
 
 sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
@@ -204,4 +204,15 @@ articlesModule.controller('articleCtrl',['$scope','$http','$routeParams',functio
 	$http.jsonp(articleURL).success(function(data){
 		$scope.article = data.post;
 	}).error(function(){});
+}]);
+'use strict';
+
+var module404  = angular.module("sriramajeyam.module404",['ngRoute']);
+
+module404.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.when('/404', { templateUrl: 'modules/404/404.html', controller: 'Ctrl404' });
+  	$routeProvider.otherwise({redirectTo: '/404'});
+}]);
+
+module404.controller('Ctrl404',['$scope',function($scope){
 }]);

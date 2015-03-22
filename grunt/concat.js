@@ -40,7 +40,7 @@ module.exports = {
         dest:'js/lib.min.js',
     },
     jsApp: {
-        src:['src/app/app.js','src/app/home/home.js','src/app/aboutme/aboutme.js','src/app/skills/skills.js','src/app/contactme/contactme.js','src/app/bookmarks/bookmarks.js','src/app/disclaimer/disclaimer.js','src/app/articles/articles.js'],
+        src:['src/app/app.js','src/app/home/home.js','src/app/aboutme/aboutme.js','src/app/skills/skills.js','src/app/contactme/contactme.js','src/app/bookmarks/bookmarks.js','src/app/disclaimer/disclaimer.js','src/app/articles/articles.js','src/app/404/404.js'],
         dest:'js/app.js',
     }
 }

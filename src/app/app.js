@@ -12,7 +12,8 @@ var myappDependencies = [
 	'sriramajeyam.contactme',
 	'sriramajeyam.bookmarks',
 	'sriramajeyam.disclaimer',
-	'sriramajeyam.articles'
+	'sriramajeyam.articles',
+	'sriramajeyam.module404'
 ];
 
 var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
@@ -20,7 +21,6 @@ var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.conc
 sriramajeyamapp.config(['$routeProvider','$compileProvider', function($routeProvider,$compileProvider) {
 	$compileProvider.debugInfoEnabled(false);
 	$routeProvider.when('/', { templateUrl: 'modules/home/home.html', controller: 'HomeCtrl' });
-  	$routeProvider.otherwise({redirectTo: '/'});
 }]);
 
 sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
