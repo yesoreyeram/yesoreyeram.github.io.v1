@@ -1,14 +1,16 @@
 'use strict';
 
 var thirdpartyDependencies = [	
-	'ngRoute'
+	'ngRoute',
+	'ngMaterial'
 ];
 
 var myappDependencies = [	
 	'sriramajeyam.home',
 	'sriramajeyam.aboutme',
 	'sriramajeyam.skills',
-	'sriramajeyam.contactme'
+	'sriramajeyam.contactme',
+	'sriramajeyam.bookmarks'
 ];
 
 var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
@@ -31,8 +33,16 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 
 var homeModule  = angular.module("sriramajeyam.home",['ngRoute']);
 
-homeModule.controller('HomeCtrl',['$scope',function($scope){
+homeModule.controller('HomeCtrl',['$scope','$http',function($scope,$http){
 	$scope.title ="Sriramajeyam Sugumaran Official website";
+	$http.get('http://feeds.delicious.com/v2/json/yesoreyeram').
+	  success(function(data, status, headers, config) {
+	  	$scope.deliciousBookmarks = data;
+	    console.log(data);
+	  }).
+	  error(function(data, status, headers, config) {
+	    console.log("Error");
+	  });
 }]);
 'use strict';
 
@@ -59,6 +69,7 @@ var skillsModule  = angular.module("sriramajeyam.skills",['ngRoute']);
 
 skillsModule.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/skills', { templateUrl: 'modules/skills/skills.html', controller: 'skillsCtrl' });
+	$routeProvider.when('/work', { templateUrl: 'modules/skills/skills.html', controller: 'skillsCtrl' });
 }]);
 
 skillsModule.controller('skillsCtrl',['$scope',function($scope){
@@ -96,4 +107,23 @@ contactmeModule.config(['$routeProvider', function($routeProvider) {
 
 contactmeModule.controller('contactmeCtrl',['$scope',function($scope){
 
+}]);
+'use strict';
+
+var bookmarksModule  = angular.module("sriramajeyam.bookmarks",['ngRoute']);
+
+bookmarksModule.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.when('/bookmarks', { templateUrl: 'modules/bookmarks/bookmarks.html', controller: 'bookmarksCtrl' });
+}]);
+
+bookmarksModule.controller('bookmarksCtrl',['$scope','$http',function($scope,$http){
+	$scope.title = "My Bookmarks";
+	$http.get('http://feeds.delicious.com/v2/json/yesoreyeram').
+	  success(function(data, status, headers, config) {
+	  	$scope.deliciousBookmarks = data;
+	    console.log(data);
+	  }).
+	  error(function(data, status, headers, config) {
+	    console.log("Error");
+	  });
 }]);

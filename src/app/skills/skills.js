@@ -4,6 +4,7 @@ var skillsModule  = angular.module("sriramajeyam.skills",['ngRoute']);
 
 skillsModule.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/skills', { templateUrl: 'modules/skills/skills.html', controller: 'skillsCtrl' });
+	$routeProvider.when('/work', { templateUrl: 'modules/skills/skills.html', controller: 'skillsCtrl' });
 }]);
 
 skillsModule.controller('skillsCtrl',['$scope',function($scope){

@@ -1,14 +1,16 @@
 'use strict';
 
 var thirdpartyDependencies = [	
-	'ngRoute'
+	'ngRoute',
+	'ngMaterial'
 ];
 
 var myappDependencies = [	
 	'sriramajeyam.home',
 	'sriramajeyam.aboutme',
 	'sriramajeyam.skills',
-	'sriramajeyam.contactme'
+	'sriramajeyam.contactme',
+	'sriramajeyam.bookmarks'
 ];
 
 var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
