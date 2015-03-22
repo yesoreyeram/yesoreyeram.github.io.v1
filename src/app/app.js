@@ -1,8 +1,7 @@
 'use strict';
 
 var thirdpartyDependencies = [	
-	'ngRoute',
-	'ngMaterial'
+	'ngRoute'
 ];
 
 var myappDependencies = [	

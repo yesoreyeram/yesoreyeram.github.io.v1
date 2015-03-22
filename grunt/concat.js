@@ -28,7 +28,7 @@ module.exports = {
         dest: 'manifest.json',
     },
     cssLib: {
-        src:['lib/bootstrap/dist/css/bootstrap.min.css','lib/angular-material/angular-material.min.css'],
+        src:['lib/bootstrap/dist/css/bootstrap.min.css'],
         dest:'css/lib.min.css',
     },
     cssApp:{
@@ -36,7 +36,7 @@ module.exports = {
         dest:'css/app.css',
     },
     jsLib: {
-        src:['lib/underscore/underscore-min.js','lib/angular/angular.min.js','lib/angular-route/angular-route.min.js','lib/angular-animate/angular-animate.min.js','lib/angular-sanitize/angular-sanitize.min.js','lib/angular-aria/angular-aria.min.js','lib/angular-material/angular-material.min.js'],
+        src:['lib/underscore/underscore-min.js','lib/angular/angular.min.js','lib/angular-route/angular-route.min.js','lib/angular-sanitize/angular-sanitize.min.js'],
         dest:'js/lib.min.js',
     },
     jsApp: {
