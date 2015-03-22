@@ -10,7 +10,8 @@ var myappDependencies = [
 	'sriramajeyam.aboutme',
 	'sriramajeyam.skills',
 	'sriramajeyam.contactme',
-	'sriramajeyam.bookmarks'
+	'sriramajeyam.bookmarks',
+	'sriramajeyam.disclaimer'
 ];
 
 var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
@@ -33,17 +34,18 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 
 var homeModule  = angular.module("sriramajeyam.home",['ngRoute']);
 
-homeModule.controller('HomeCtrl',['$scope','$http',function($scope,$http){
+homeModule.controller('HomeCtrl',['$scope','$http','_',function($scope,$http,_){
 	$scope.title ="Sriramajeyam Sugumaran Official website";
-	$http.get('http://feeds.delicious.com/v2/json/yesoreyeram').
-	  success(function(data, status, headers, config) {
-	  	$scope.deliciousBookmarks = data;
-	    console.log(data);
-	  }).
-	  error(function(data, status, headers, config) {
-	    console.log("Error");
-	  });
+	var feedURl ="http://feeds.delicious.com/v2/json/yesoreyeram?callback=JSON_CALLBACK";
+	$http.jsonp(feedURl).success(function(data){
+		$scope.deliciousBookmarks = _.first(data,5);
+		console.log( _.first(data,5));
+	}).error(function(){});
 }]);
+
+homeModule.factory('_', function() {
+  return window._; // assumes underscore has already been loaded on the page
+});
 'use strict';
 
 var aboutmeModule  = angular.module("sriramajeyam.aboutme",['ngRoute']);
@@ -118,12 +120,35 @@ bookmarksModule.config(['$routeProvider', function($routeProvider) {
 
 bookmarksModule.controller('bookmarksCtrl',['$scope','$http',function($scope,$http){
 	$scope.title = "My Bookmarks";
-	$http.get('http://feeds.delicious.com/v2/json/yesoreyeram').
-	  success(function(data, status, headers, config) {
-	  	$scope.deliciousBookmarks = data;
-	    console.log(data);
-	  }).
-	  error(function(data, status, headers, config) {
-	    console.log("Error");
-	  });
+
+
+	var feedURl ="http://feeds.delicious.com/v2/json/yesoreyeram?callback=JSON_CALLBACK";
+	$http.jsonp(feedURl).success(function(data){
+		$scope.deliciousBookmarks = data;
+	}).error(function(){});
+
+
+	var tagsUrl ="http://feeds.delicious.com/v2/json/tags/yesoreyeram?callback=JSON_CALLBACK";
+	var tagsCollection =[];
+	$http.jsonp(tagsUrl).success(function(data){
+		_.map(_.keys(data),function(a){
+			if(a != "for:@twitter" && a != "!fromtwitter") {
+				tagsCollection.push({"TagName": a ,"Count":data[a]});
+			}
+		});
+		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ; 
+	}).error(function(){});
+
+}]);
+'use strict';
+
+var disclaimerModule  = angular.module("sriramajeyam.disclaimer",['ngRoute']);
+
+disclaimerModule.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.when('/disclaimer', { templateUrl: 'modules/disclaimer/disclaimer.html', controller: 'disclaimerCtrl' });
+}]);
+
+disclaimerModule.controller('disclaimerCtrl',['$scope',function($scope){
+	$scope.title = "Disclaimer";
+
 }]);

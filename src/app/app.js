@@ -10,7 +10,8 @@ var myappDependencies = [
 	'sriramajeyam.aboutme',
 	'sriramajeyam.skills',
 	'sriramajeyam.contactme',
-	'sriramajeyam.bookmarks'
+	'sriramajeyam.bookmarks',
+	'sriramajeyam.disclaimer'
 ];
 
 var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
