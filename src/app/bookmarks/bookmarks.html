@@ -15,7 +15,7 @@
 			<h3>My favourite tags</h3>
 			<div ng-hide="deliciousTags">Loading..</div>
 			<ul>
-				<li ng-repeat="tag in deliciousTags">{{tag.TagName}}({{tag.Count}})</li>
+				<li ng-repeat="tag in deliciousTags"><a href="#/bookmarks/{{tag.TagName}}">{{tag.TagName}}</a>({{tag.Count}})</li>
 			</ul>
 		</div>
 	</div>

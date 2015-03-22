@@ -19,6 +19,8 @@ module.exports = {
             'modules/skills/skills.html': 'src/app/skills/skills.html',
             'modules/contactme/contactme.html': 'src/app/contactme/contactme.html',
             'modules/bookmarks/bookmarks.html': 'src/app/bookmarks/bookmarks.html',
+            'modules/articles/articles.html': 'src/app/articles/articles.html',
+            'modules/articles/article.html': 'src/app/articles/article.html',
             'modules/disclaimer/disclaimer.html': 'src/app/disclaimer/disclaimer.html',
             'modules/app/topmenu.html': 'src/app/app/topmenu.html',
             'modules/app/bottom.html': 'src/app/app/bottom.html'

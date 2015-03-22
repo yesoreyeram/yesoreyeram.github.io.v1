@@ -1,0 +1,12 @@
+<div class="container">
+	<div ng-hide="blogArticles">Loading..</div>
+	<div ng-show="blogArticles">		
+		<h3>{{title}}</h3>
+		<ul>
+			<li ng-repeat="blog in blogArticles">
+				<a href="#/article/{{blog.slug}}">{{blog.title}}</a>
+			</li>
+			<li class="right"><a href="http://yesoreyeram-yesoreyeram.rhcloud.com/" target="_blank">Read blog</a></li>
+		</ul>
+	</div>
+</div>

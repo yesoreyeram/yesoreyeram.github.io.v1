@@ -36,11 +36,11 @@ module.exports = {
         dest:'css/app.css',
     },
     jsLib: {
-        src:['lib/underscore/underscore-min.js','lib/angular/angular.min.js','lib/angular-route/angular-route.min.js','lib/angular-animate/angular-animate.min.js','lib/angular-aria/angular-aria.min.js','lib/angular-material/angular-material.min.js'],
+        src:['lib/underscore/underscore-min.js','lib/angular/angular.min.js','lib/angular-route/angular-route.min.js','lib/angular-animate/angular-animate.min.js','lib/angular-sanitize/angular-sanitize.min.js','lib/angular-aria/angular-aria.min.js','lib/angular-material/angular-material.min.js'],
         dest:'js/lib.min.js',
     },
     jsApp: {
-        src:['src/app/app.js','src/app/home/home.js','src/app/aboutme/aboutme.js','src/app/skills/skills.js','src/app/contactme/contactme.js','src/app/bookmarks/bookmarks.js','src/app/disclaimer/disclaimer.js'],
+        src:['src/app/app.js','src/app/home/home.js','src/app/aboutme/aboutme.js','src/app/skills/skills.js','src/app/contactme/contactme.js','src/app/bookmarks/bookmarks.js','src/app/disclaimer/disclaimer.js','src/app/articles/articles.js'],
         dest:'js/app.js',
     }
 }

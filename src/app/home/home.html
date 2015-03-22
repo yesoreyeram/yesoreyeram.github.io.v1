@@ -23,7 +23,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-4">
-			<h3>My Favourite Websites &amp; Bookmarks</h3>
+			<h3>My Recent Bookmarks</h3>
 			<div ng-hide="deliciousBookmarks">Loading..</div>
 			<ul>	
 				<li ng-repeat="bookmark in deliciousBookmarks"><a href="{{bookmark.u}}" target="_blank">{{bookmark.d}}</a></li>
@@ -37,7 +37,13 @@
 		</div>
 		<div class="col-md-4">
 			<h3>Articles I Wrote</h3>
-			<p>Coming Soon</p>
+			<div ng-hide="blogArticles">Loading...</div>
+			<ul>
+				<li ng-repeat="blog in blogArticles">
+					<a href="#/article/{{blog.slug}}">{{blog.title}}</a>
+				</li>
+				<li class="right"><a href="#/articles">More Articles</a></li>
+			</ul>
 		</div>
 	</div>
 </div>
