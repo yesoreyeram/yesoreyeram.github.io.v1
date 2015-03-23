@@ -28,6 +28,20 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 		"lastName" : "sriramajeyam"
 	}
 	$scope.title ="Sriramajeyam Sugumaran Official website";
+	$scope.hideLoader = true;
+	$scope.$on('hideLoader', function(event, data) { 
+		$scope.hideLoader = data;
+	});
+	$scope.$on('$routeChangeStart', function(next, current) { 
+		if(current.$$route.originalPath == "/bookmarks" || 
+			current.$$route.originalPath == "/bookmarks/:bookmarkTag" ||
+			current.$$route.originalPath == "/articles"|| 
+			current.$$route.originalPath == "/article/:slug"
+			)
+		{
+			$scope.hideLoader =false;
+		}
+ });
 }]);
 
 'use strict';
@@ -128,10 +142,10 @@ bookmarksModule.config(['$routeProvider', function($routeProvider) {
 bookmarksModule.controller('bookmarksCtrl',['$scope','$http',function($scope,$http){
 	$scope.title = "My Bookmarks";
 
-
 	var feedURl ="http://feeds.delicious.com/v2/json/yesoreyeram?callback=JSON_CALLBACK";
 	$http.jsonp(feedURl).success(function(data){
 		$scope.deliciousBookmarks = data;
+		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 
 
@@ -144,6 +158,7 @@ bookmarksModule.controller('bookmarksCtrl',['$scope','$http',function($scope,$ht
 			}
 		});
 		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ; 
+		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 
 }]);
@@ -153,6 +168,7 @@ bookmarksModule.controller('bookmarksbyTagCtrl',['$scope','$http','$routeParams'
 	var feedURl ="http://feeds.delicious.com/v2/json/yesoreyeram/"+$routeParams.bookmarkTag+"?callback=JSON_CALLBACK";
 	$http.jsonp(feedURl).success(function(data){
 		$scope.deliciousBookmarks = data;
+		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 
 	
@@ -164,7 +180,8 @@ bookmarksModule.controller('bookmarksbyTagCtrl',['$scope','$http','$routeParams'
 				tagsCollection.push({"TagName": a ,"Count":data[a]});
 			}
 		});
-		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ; 
+		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ;
+		$scope.$emit('hideLoader', true); 
 	}).error(function(){});
 
 }]);
@@ -194,7 +211,8 @@ articlesModule.controller('articlesCtrl',['$scope','$http',function($scope,$http
 	$scope.title = "Articles";
 	var blogURL ="http://yesoreyeram-yesoreyeram.rhcloud.com/?json=1&callback=JSON_CALLBACK";
 	$http.jsonp(blogURL).success(function(data){
-		$scope.blogArticles = data.posts;
+		$scope.blogArticles = data.posts;		
+		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 }]);
 articlesModule.controller('articleCtrl',['$scope','$http','$routeParams',function($scope,$http,$routeParams){
@@ -202,6 +220,7 @@ articlesModule.controller('articleCtrl',['$scope','$http','$routeParams',functio
 	var articleURL ="http://yesoreyeram-yesoreyeram.rhcloud.com/"+$routeParams.slug+"/?json=1&callback=JSON_CALLBACK";
 	$http.jsonp(articleURL).success(function(data){
 		$scope.article = data.post;
+		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 }]);
 'use strict';

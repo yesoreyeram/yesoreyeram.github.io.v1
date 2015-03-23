@@ -28,4 +28,18 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 		"lastName" : "sriramajeyam"
 	}
 	$scope.title ="Sriramajeyam Sugumaran Official website";
+	$scope.hideLoader = true;
+	$scope.$on('hideLoader', function(event, data) { 
+		$scope.hideLoader = data;
+	});
+	$scope.$on('$routeChangeStart', function(next, current) { 
+		if(current.$$route.originalPath == "/bookmarks" || 
+			current.$$route.originalPath == "/bookmarks/:bookmarkTag" ||
+			current.$$route.originalPath == "/articles"|| 
+			current.$$route.originalPath == "/article/:slug"
+			)
+		{
+			$scope.hideLoader =false;
+		}
+ });
 }]);

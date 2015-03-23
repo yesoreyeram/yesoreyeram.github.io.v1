@@ -24,6 +24,7 @@
 		<div ng-include="'modules/app/topmenu.html'"></div>
 	</div>
 	<div id="main">
+		<div id="loader" ng-hide="hideLoader">&nbsp;<div class="loader">Loading...</div></div>
 		<div ng-view></div>
 	</div>
 	<div id="bottom">

@@ -10,10 +10,10 @@ bookmarksModule.config(['$routeProvider', function($routeProvider) {
 bookmarksModule.controller('bookmarksCtrl',['$scope','$http',function($scope,$http){
 	$scope.title = "My Bookmarks";
 
-
 	var feedURl ="http://feeds.delicious.com/v2/json/yesoreyeram?callback=JSON_CALLBACK";
 	$http.jsonp(feedURl).success(function(data){
 		$scope.deliciousBookmarks = data;
+		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 
 
@@ -26,6 +26,7 @@ bookmarksModule.controller('bookmarksCtrl',['$scope','$http',function($scope,$ht
 			}
 		});
 		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ; 
+		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 
 }]);
@@ -35,6 +36,7 @@ bookmarksModule.controller('bookmarksbyTagCtrl',['$scope','$http','$routeParams'
 	var feedURl ="http://feeds.delicious.com/v2/json/yesoreyeram/"+$routeParams.bookmarkTag+"?callback=JSON_CALLBACK";
 	$http.jsonp(feedURl).success(function(data){
 		$scope.deliciousBookmarks = data;
+		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 
 	
@@ -46,7 +48,8 @@ bookmarksModule.controller('bookmarksbyTagCtrl',['$scope','$http','$routeParams'
 				tagsCollection.push({"TagName": a ,"Count":data[a]});
 			}
 		});
-		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ; 
+		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ;
+		$scope.$emit('hideLoader', true); 
 	}).error(function(){});
 
 }]);
