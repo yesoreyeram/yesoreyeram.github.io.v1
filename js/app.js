@@ -1,4 +1,5 @@
-'use strict';
+(function () {
+"use strict";
 
 var thirdpartyDependencies = [	
 	'ngRoute'
@@ -26,7 +27,7 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 	$scope.myprofile = {
 		"firstName" : "sriramajeyam",
 		"lastName" : "sriramajeyam"
-	}
+	};
 	$scope.title ="Sriramajeyam Sugumaran Official website";
 	$scope.hideLoader = true;
 	$scope.$on('hideLoader', function(event, data) { 
@@ -43,7 +44,8 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 		}
  });
 }]);
-
+}());
+(function () {
 'use strict';
 
 var homeModule  = angular.module("sriramajeyam.home",['ngRoute']);
@@ -66,6 +68,8 @@ homeModule.controller('HomeCtrl',['$scope','$http','_',function($scope,$http,_){
 homeModule.factory('_', function() {
   return window._; // assumes underscore has already been loaded on the page
 });
+}());
+(function () {
 'use strict';
 
 var aboutmeModule  = angular.module("sriramajeyam.aboutme",['ngRoute']);
@@ -85,6 +89,8 @@ aboutmeModule.controller('aboutmeCtrl',['$scope',function($scope){
 		{"name":"Delicious","url":"https://delicious.com/yesoreyeram","icon":"delicious"},
 	];
 }]);
+}());
+(function () {
 'use strict';
 
 var skillsModule  = angular.module("sriramajeyam.skills",['ngRoute']);
@@ -118,6 +124,8 @@ $scope.tools = [
 		{	"Name" : "Git" },
 	];
 }]);
+}());
+(function () {
 'use strict';
 
 var contactmeModule  = angular.module("sriramajeyam.contactme",['ngRoute']);
@@ -130,6 +138,8 @@ contactmeModule.config(['$routeProvider', function($routeProvider) {
 contactmeModule.controller('contactmeCtrl',['$scope',function($scope){
 
 }]);
+}());
+(function () {
 'use strict';
 
 var bookmarksModule  = angular.module("sriramajeyam.bookmarks",['ngRoute']);
@@ -193,6 +203,8 @@ bookmarksModule.controller('bookmarksbyTagCtrl',['$scope','$http','$routeParams'
 	}).error(function(){});
 
 }]);
+}());
+(function () {
 'use strict';
 
 var disclaimerModule  = angular.module("sriramajeyam.disclaimer",['ngRoute']);
@@ -205,6 +217,8 @@ disclaimerModule.controller('disclaimerCtrl',['$scope',function($scope){
 	$scope.title = "Disclaimer";
 
 }]);
+}());
+(function () {
 'use strict';
 
 var articlesModule  = angular.module("sriramajeyam.articles",['ngRoute','ngSanitize']);
@@ -231,6 +245,8 @@ articlesModule.controller('articleCtrl',['$scope','$http','$routeParams',functio
 		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 }]);
+}());
+(function () {
 'use strict';
 
 var module404  = angular.module("sriramajeyam.module404",['ngRoute']);
@@ -242,3 +258,4 @@ module404.config(['$routeProvider', function($routeProvider) {
 
 module404.controller('Ctrl404',['$scope',function($scope){
 }]);
+}());

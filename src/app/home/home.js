@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 var homeModule  = angular.module("sriramajeyam.home",['ngRoute']);
@@ -20,3 +21,4 @@ homeModule.controller('HomeCtrl',['$scope','$http','_',function($scope,$http,_){
 homeModule.factory('_', function() {
   return window._; // assumes underscore has already been loaded on the page
 });
+}());

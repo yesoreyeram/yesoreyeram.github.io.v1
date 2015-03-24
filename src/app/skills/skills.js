@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 var skillsModule  = angular.module("sriramajeyam.skills",['ngRoute']);
@@ -31,3 +32,4 @@ $scope.tools = [
 		{	"Name" : "Git" },
 	];
 }]);
+}());

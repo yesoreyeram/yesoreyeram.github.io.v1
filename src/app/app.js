@@ -1,4 +1,5 @@
-'use strict';
+(function () {
+"use strict";
 
 var thirdpartyDependencies = [	
 	'ngRoute'
@@ -26,7 +27,7 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 	$scope.myprofile = {
 		"firstName" : "sriramajeyam",
 		"lastName" : "sriramajeyam"
-	}
+	};
 	$scope.title ="Sriramajeyam Sugumaran Official website";
 	$scope.hideLoader = true;
 	$scope.$on('hideLoader', function(event, data) { 
@@ -43,3 +44,4 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 		}
  });
 }]);
+}());

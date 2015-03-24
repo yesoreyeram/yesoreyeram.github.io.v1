@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 var disclaimerModule  = angular.module("sriramajeyam.disclaimer",['ngRoute']);
@@ -10,3 +11,4 @@ disclaimerModule.controller('disclaimerCtrl',['$scope',function($scope){
 	$scope.title = "Disclaimer";
 
 }]);
+}());

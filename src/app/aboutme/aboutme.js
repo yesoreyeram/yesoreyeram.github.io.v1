@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 var aboutmeModule  = angular.module("sriramajeyam.aboutme",['ngRoute']);
@@ -17,3 +18,4 @@ aboutmeModule.controller('aboutmeCtrl',['$scope',function($scope){
 		{"name":"Delicious","url":"https://delicious.com/yesoreyeram","icon":"delicious"},
 	];
 }]);
+}());

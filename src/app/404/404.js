@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 var module404  = angular.module("sriramajeyam.module404",['ngRoute']);
@@ -9,3 +10,4 @@ module404.config(['$routeProvider', function($routeProvider) {
 
 module404.controller('Ctrl404',['$scope',function($scope){
 }]);
+}());

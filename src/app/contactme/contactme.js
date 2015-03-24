@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 var contactmeModule  = angular.module("sriramajeyam.contactme",['ngRoute']);
@@ -10,3 +11,4 @@ contactmeModule.config(['$routeProvider', function($routeProvider) {
 contactmeModule.controller('contactmeCtrl',['$scope',function($scope){
 
 }]);
+}());

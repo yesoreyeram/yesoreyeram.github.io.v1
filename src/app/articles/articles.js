@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 var articlesModule  = angular.module("sriramajeyam.articles",['ngRoute','ngSanitize']);
@@ -24,3 +25,4 @@ articlesModule.controller('articleCtrl',['$scope','$http','$routeParams',functio
 		$scope.$emit('hideLoader', true);
 	}).error(function(){});
 }]);
+}());

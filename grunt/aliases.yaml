@@ -7,6 +7,7 @@ default:
 - 'removeWhiteSpace'
 - 'replace:wordart'
 - 'htmlmin:CopyModules'
+- 'jshint:all'
 removeWhiteSpace:
 - 'htmlmin:removeWhiteSpaceAndComments'
 c:
@@ -26,6 +27,9 @@ copyAppFiles:
 - 'concat:jsApp'
 copyProjectFiles:
 - 'concat:main'
+jsValidate:
+- 'default'
+- 'jshint:all'
 publish:
 - 'bump'
 - 'default'

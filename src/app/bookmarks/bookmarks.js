@@ -1,3 +1,4 @@
+(function () {
 'use strict';
 
 var bookmarksModule  = angular.module("sriramajeyam.bookmarks",['ngRoute']);
@@ -61,3 +62,4 @@ bookmarksModule.controller('bookmarksbyTagCtrl',['$scope','$http','$routeParams'
 	}).error(function(){});
 
 }]);
+}());
