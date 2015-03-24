@@ -33,3 +33,5 @@ jsValidate:
 publish:
 - 'bump'
 - 'default'
+tests:
+- 'jshint:all'
