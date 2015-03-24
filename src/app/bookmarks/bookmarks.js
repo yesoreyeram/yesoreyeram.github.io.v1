@@ -9,11 +9,14 @@ bookmarksModule.config(['$routeProvider', function($routeProvider) {
 
 bookmarksModule.controller('bookmarksCtrl',['$scope','$http',function($scope,$http){
 	$scope.title = "My Bookmarks";
+	$scope.isFeedsLoaded = false;
+	$scope.isTagsLoaded = false;
 
 	var feedURl ="http://feeds.delicious.com/v2/json/yesoreyeram?callback=JSON_CALLBACK";
 	$http.jsonp(feedURl).success(function(data){
 		$scope.deliciousBookmarks = data;
-		$scope.$emit('hideLoader', true);
+		$scope.isFeedsLoaded = true;
+		$scope.$emit('hideLoader', $scope.isFeedsLoaded *$scope.isTagsLoaded  );
 	}).error(function(){});
 
 
@@ -26,17 +29,21 @@ bookmarksModule.controller('bookmarksCtrl',['$scope','$http',function($scope,$ht
 			}
 		});
 		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ; 
-		$scope.$emit('hideLoader', true);
+		$scope.isTagsLoaded = true;
+		$scope.$emit('hideLoader', $scope.isFeedsLoaded *$scope.isTagsLoaded  );
 	}).error(function(){});
 
 }]);
 bookmarksModule.controller('bookmarksbyTagCtrl',['$scope','$http','$routeParams',function($scope,$http,$routeParams){
 	$scope.title = "My Bookmarks";
+	$scope.isFeedsLoaded = false;
+	$scope.isTagsLoaded = false;
 
 	var feedURl ="http://feeds.delicious.com/v2/json/yesoreyeram/"+$routeParams.bookmarkTag+"?callback=JSON_CALLBACK";
 	$http.jsonp(feedURl).success(function(data){
 		$scope.deliciousBookmarks = data;
-		$scope.$emit('hideLoader', true);
+		$scope.isFeedsLoaded = true;
+		$scope.$emit('hideLoader', $scope.isFeedsLoaded * $scope.isTagsLoaded  );
 	}).error(function(){});
 
 	
@@ -49,7 +56,8 @@ bookmarksModule.controller('bookmarksbyTagCtrl',['$scope','$http','$routeParams'
 			}
 		});
 		$scope.deliciousTags =  _.first(_.sortBy(tagsCollection, 'Count').reverse(),20) ;
-		$scope.$emit('hideLoader', true); 
+		$scope.isTagsLoaded = true;
+		$scope.$emit('hideLoader', $scope.isFeedsLoaded *$scope.isTagsLoaded  );
 	}).error(function(){});
 
 }]);

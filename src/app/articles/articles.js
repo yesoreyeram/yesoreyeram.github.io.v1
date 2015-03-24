@@ -9,7 +9,7 @@ articlesModule.config(['$routeProvider', function($routeProvider) {
 }]);
 
 articlesModule.controller('articlesCtrl',['$scope','$http',function($scope,$http){
-	$scope.title = "Articles";
+	$scope.title = "Articles I wrote recently";
 	var blogURL ="http://yesoreyeram-yesoreyeram.rhcloud.com/?json=1&callback=JSON_CALLBACK";
 	$http.jsonp(blogURL).success(function(data){
 		$scope.blogArticles = data.posts;		
