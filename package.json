@@ -1,6 +1,6 @@
 {
   "name": "yesoreyeram.github.io",
-  "version": "0.0.64",
+  "version": "0.0.66",
   "homepage": "https://github.com/yesoreyeram/yesoreyeram.github.io",
   "description": "Sriramajeyam Sugumaran's official website",
   "main": "index.html",
@@ -32,6 +32,7 @@
     "grunt-contrib-htmlmin": "^0.3.0",
     "grunt-contrib-jshint": "^0.11.1",
     "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.8.0",
     "grunt-text-replace": "^0.3.12",
     "jshint-stylish": "^1.0.1",
     "load-grunt-config": "^0.14.0",

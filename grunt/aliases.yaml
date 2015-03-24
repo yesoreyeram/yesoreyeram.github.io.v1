@@ -7,6 +7,7 @@ default:
 - 'removeWhiteSpace'
 - 'replace:wordart'
 - 'htmlmin:CopyModules'
+- 'jsMin'
 - 'jshint:all'
 removeWhiteSpace:
 - 'htmlmin:removeWhiteSpaceAndComments'
@@ -35,3 +36,5 @@ publish:
 - 'default'
 tests:
 - 'jshint:all'
+jsMin:
+- 'uglify:my_target'
