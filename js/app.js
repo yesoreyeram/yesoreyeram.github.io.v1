@@ -33,6 +33,7 @@ sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
 	$scope.$on('hideLoader', function(event, data) { 
 		$scope.hideLoader = data;
 	});
+	var a ="sds"
 	$scope.$on('$routeChangeStart', function(next, current) { 
 		if(current.$$route.originalPath == "/bookmarks" || 
 			current.$$route.originalPath == "/bookmarks/:bookmarkTag" ||
