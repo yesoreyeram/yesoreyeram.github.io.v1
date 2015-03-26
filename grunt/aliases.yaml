@@ -32,8 +32,8 @@ jsValidate:
 - 'default'
 - 'jshint:all'
 publish:
-- 'bump'
 - 'default'
+- 'push'
 tests:
 - 'jshint:all'
 jsMin:
