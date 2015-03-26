@@ -2,9 +2,9 @@ module.exports = {
     options: {
         files: ['package.json', 'bower.json'],
         updateConfigs: [],
-        commit: false,
+        commit: true,
         createTag: false,
-        push: false,
-        globalReplace: false
+        push: true,
+        globalReplace: true
     }
 }
