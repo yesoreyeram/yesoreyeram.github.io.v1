@@ -8,7 +8,7 @@ var thirdpartyDependencies = [
 var myappDependencies = [	
 	'sriramajeyam.home',
 	'sriramajeyam.aboutme',
-	'sriramajeyam.skills',
+	'sriramajeyam.work',
 	'sriramajeyam.contactme',
 	'sriramajeyam.bookmarks',
 	'sriramajeyam.disclaimer',
@@ -93,14 +93,14 @@ aboutmeModule.controller('aboutmeCtrl',['$scope',function($scope){
 (function () {
 'use strict';
 
-var skillsModule  = angular.module("sriramajeyam.skills",['ngRoute']);
+var workModule  = angular.module("sriramajeyam.work",['ngRoute']);
 
-skillsModule.config(['$routeProvider', function($routeProvider) {
-	$routeProvider.when('/skills', { templateUrl: 'modules/skills/skills.html', controller: 'skillsCtrl' });
-	$routeProvider.when('/work', { templateUrl: 'modules/skills/skills.html', controller: 'skillsCtrl' });
+workModule.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.when('/skills', { templateUrl: 'modules/work/work.html', controller: 'workCtrl' });
+	$routeProvider.when('/work', { templateUrl: 'modules/work/work.html', controller: 'workCtrl' });
 }]);
 
-skillsModule.controller('skillsCtrl',['$scope',function($scope){
+workModule.controller('workCtrl',['$scope',function($scope){
 $scope.skills = [
 		{"name":"HTML","type":"","since":"","interestlevel":"","experiencelevel":"","rating":"","logo":"","url":""},
 		{"name":"CSS","type":"","since":"","interestlevel":"","experiencelevel":"","rating":"","logo":"","url":""},

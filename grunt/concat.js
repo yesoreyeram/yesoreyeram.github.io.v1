@@ -32,7 +32,7 @@ module.exports = {
         dest:'css/lib.min.css',
     },
     cssApp:{
-        src:['src/app/app.css','src/app/aboutme/aboutme.css','src/app/skills/skills.css','src/app/contactme/contactme.css','src/app/bookmarks/bookmarks.css'],
+        src:['src/app/app.css','src/app/aboutme/aboutme.css','src/app/work/work.css','src/app/contactme/contactme.css','src/app/bookmarks/bookmarks.css'],
         dest:'css/app.css',
     },
     jsLib: {
@@ -40,7 +40,7 @@ module.exports = {
         dest:'js/lib.min.js',
     },
     jsApp: {
-        src:['src/app/app.js','src/app/home/home.js','src/app/aboutme/aboutme.js','src/app/skills/skills.js','src/app/contactme/contactme.js','src/app/bookmarks/bookmarks.js','src/app/disclaimer/disclaimer.js','src/app/articles/articles.js','src/app/404/404.js'],
+        src:['src/app/app.js','src/app/home/home.js','src/app/aboutme/aboutme.js','src/app/work/work.js','src/app/contactme/contactme.js','src/app/bookmarks/bookmarks.js','src/app/disclaimer/disclaimer.js','src/app/articles/articles.js','src/app/404/404.js'],
         dest:'js/app.js',
     }
 }

@@ -8,7 +8,7 @@ var thirdpartyDependencies = [
 var myappDependencies = [	
 	'sriramajeyam.home',
 	'sriramajeyam.aboutme',
-	'sriramajeyam.skills',
+	'sriramajeyam.work',
 	'sriramajeyam.contactme',
 	'sriramajeyam.bookmarks',
 	'sriramajeyam.disclaimer',

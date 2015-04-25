@@ -16,7 +16,7 @@ module.exports = {
           files: {                         
             'modules/home/home.html': 'src/app/home/home.html',
             'modules/aboutme/aboutme.html': 'src/app/aboutme/aboutme.html',
-            'modules/skills/skills.html': 'src/app/skills/skills.html',
+            'modules/work/work.html': 'src/app/work/work.html',
             'modules/contactme/contactme.html': 'src/app/contactme/contactme.html',
             'modules/bookmarks/bookmarks.html': 'src/app/bookmarks/bookmarks.html',
             'modules/articles/articles.html': 'src/app/articles/articles.html',
