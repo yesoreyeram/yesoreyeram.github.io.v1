@@ -125,6 +125,11 @@ body
   }
 }
 
+.fa-ul
+{
+	list-style: none;
+	display: inline-block;
+}
 #aboutme
 {
 	margin-top: 50px;
