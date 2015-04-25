@@ -124,3 +124,23 @@ body
     height: 5em;
   }
 }
+
+.nav.fa-ul
+{
+  font-size: 14px;
+  color: gray;
+}
+.nav.fa-ul li
+{
+  padding-top: 14px;
+  padding-left: 14px;
+}
+.fa-globe:hover{color: #000;}
+.fa-stack-overflow:hover{color:#f90;}
+.fa-delicious:hover{color:#0b79e5;}
+.fa-github:hover{color:#000000;}
+.fa-twitter:hover{color:#88c9f9;}
+.fa-facebook:hover{color:#287bbc;}
+.fa-linkedin:hover{color:#287bbc;}
+.fa-google-plus:hover{color:rgb(221, 75, 57);}
+.fa-envelope-o:hover{color:#287bbc;}

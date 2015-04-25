@@ -1,5 +1,15 @@
-.fa-ul
+#home .fa-ul
 {
 	list-style: none;
+	display: inline-block;
+	padding-top: 10px;
+}
+#home .fa-ul li
+{
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	padding: 20px;
+	float: left;
 	display: inline-block;
 }
