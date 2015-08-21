@@ -18,10 +18,9 @@ var myappDependencies = [
 
 var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
 
-sriramajeyamapp.config(['$routeProvider','$compileProvider','$locationProvider', function($routeProvider,$compileProvider,$locationProvider) {
+sriramajeyamapp.config(['$routeProvider','$compileProvider', function($routeProvider,$compileProvider) {
 	$compileProvider.debugInfoEnabled(false);
 	$routeProvider.when('/', { templateUrl: 'modules/home/home.html', controller: 'HomeCtrl' });
-	$locationProvider.html5Mode(false);
 }]);
 
 sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
