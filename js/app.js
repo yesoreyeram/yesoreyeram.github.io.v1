@@ -2,8 +2,7 @@
 "use strict";
 
 var thirdpartyDependencies = [	
-	'ngRoute',
-	'ngDisqus'
+	'ngRoute'
 ];
 
 var myappDependencies = [	
