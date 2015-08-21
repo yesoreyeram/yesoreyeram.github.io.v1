@@ -21,7 +21,7 @@ var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.conc
 sriramajeyamapp.config(['$routeProvider','$compileProvider','$locationProvider', function($routeProvider,$compileProvider,$locationProvider) {
 	$compileProvider.debugInfoEnabled(false);
 	$routeProvider.when('/', { templateUrl: 'modules/home/home.html', controller: 'HomeCtrl' });
-	$locationProvider.html5Mode(false).hashPrefix("!");
+	$locationProvider.html5Mode(false);
 }]);
 
 sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
