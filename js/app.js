@@ -2,7 +2,8 @@
 "use strict";
 
 var thirdpartyDependencies = [	
-	'ngRoute'
+	'ngRoute',
+	'ngDisqus'
 ];
 
 var myappDependencies = [	
@@ -18,9 +19,10 @@ var myappDependencies = [
 
 var sriramajeyamapp  = angular.module("sriramajeyam",thirdpartyDependencies.concat(myappDependencies));
 
-sriramajeyamapp.config(['$routeProvider','$compileProvider', function($routeProvider,$compileProvider) {
+sriramajeyamapp.config(['$routeProvider','$compileProvider','$locationProvider', function($routeProvider,$compileProvider,$locationProvider) {
 	$compileProvider.debugInfoEnabled(false);
 	$routeProvider.when('/', { templateUrl: 'modules/home/home.html', controller: 'HomeCtrl' });
+	$locationProvider.html5Mode(false).hashPrefix("!");
 }]);
 
 sriramajeyamapp.controller('appCtrl',['$scope',function($scope){
