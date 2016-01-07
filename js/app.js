@@ -111,6 +111,9 @@ $scope.skills = [
 		{"name":"MongoDB","type":"","since":"","interestlevel":"","experiencelevel":"","rating":"","logo":"","url":""},
 		{"name":"GruntJS","type":"","since":"","interestlevel":"","experiencelevel":"","rating":"","logo":"","url":""},
 		{"name":"JQuery","type":"","since":"","interestlevel":"","experiencelevel":"","rating":"","logo":"","url":""},
+		{"name":"ElasticSearch","type":"","since":"","interestlevel":"","experiencelevel":"","rating":"","logo":"","url":""},
+		{"name":"Kibana","type":"","since":"","interestlevel":"","experiencelevel":"","rating":"","logo":"","url":""},
+		{"name":"Logstash","type":"","since":"","interestlevel":"","experiencelevel":"","rating":"","logo":"","url":""},
 	];
 $scope.tools = [
 		{	"Name" : "Visual Studio" },

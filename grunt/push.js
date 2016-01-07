@@ -5,13 +5,13 @@ module.exports = {
 	    releaseBranch: 'master',
 	    add: true,
 	    addFiles: ['.'], // '.' for all files except ingored files in .gitignore
-	    commit: true,
+	    commit: false,
 	    commitMessage: 'Release v%VERSION%',
 	    commitFiles: ['package.json'], // '-a' for all files
 	    createTag: true,
 	    tagName: 'v%VERSION%',
 	    tagMessage: 'Version %VERSION%',
-	    push: true,
+	    push: false,
 	    pushTo: 'origin',
 	    npm: false,
 	    npmTag: 'Release v%VERSION%',
