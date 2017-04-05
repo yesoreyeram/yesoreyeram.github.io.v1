@@ -13,5 +13,6 @@ Site Status
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) 
 [![Build Status](https://travis-ci.org/yesoreyeram/yesoreyeram.github.io.svg)](https://travis-ci.org/yesoreyeram/yesoreyeram.github.io)
+[![Known Vulnerabilities](https://snyk.io/test/github/yesoreyeram/yesoreyeram.github.io/badge.svg)](https://snyk.io/test/github/yesoreyeram/yesoreyeram.github.io)
 
 
